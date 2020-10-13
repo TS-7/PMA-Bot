@@ -546,7 +546,7 @@ exports.start = function (SETUP) {
   });
 
   bot
-    .login(BOT_TOKEN)
+    .login(process.env.TOKEN)
     .then(null)
     .catch(() => {
       log(LOG_LEVELS.ERROR, "Unable to login check your login token");
